@@ -1,0 +1,86 @@
+<link rel="stylesheet" type="text/css" href="v6_common_reset.css">
+<style type="text/css">
+	.v6-m-nav{
+		width: 200px;
+		height: 100%;
+		overflow: hidden;
+		background: #ccc;
+		position: fixed;
+	}
+	.v6-u-first-nav{ text-indent: 20px;	}
+	.v6-u-first-nav li{ line-height: 36px; }
+	.v6-u-first-nav>li.active{ background: #ddd; }
+	.v6-u-first-nav>li.active>a{ color: #333; }
+	.v6-u-secend-nav{ text-indent: 40px; display: none; background: #fff;}
+	.v6-u-secend-nav li:hover{ background: #3DA8F5;}
+	.v6-u-secend-nav li:hover a{ color: #fff; }
+	.v6-u-navShow{
+		position: absolute;
+		right: 20px;
+		cursor: pointer;
+		font-size: 20px;
+	}
+</style>
+<section class="v6-m-nav">
+	<aside>
+		<ul class="v6-u-first-nav">
+			<li>
+				<a href="javascript:void(0)">一级导航</a>
+				<span class="v6-u-navShow">+</span>
+				<ul class="v6-u-secend-nav">
+					<li><a href="javascript:void(0)">二级导航</a></li>
+					<li><a href="javascript:void(0)">二级导航</a></li>
+					<li><a href="javascript:void(0)">二级导航</a></li>
+				</ul>
+			</li>
+			<li>
+				<a href="javascript:void(0)">一级导航</a>
+				<span class="v6-u-navShow">+</span>
+				<ul class="v6-u-secend-nav">
+					<li><a href="javascript:void(0)">二级导航</a></li>
+					<li><a href="javascript:void(0)">二级导航</a></li>
+					<li><a href="javascript:void(0)">二级导航</a></li>
+				</ul>
+			</li>
+			<li>
+				<a href="javascript:void(0)">一级导航</a>
+				<span class="v6-u-navShow">+</span>
+				<ul class="v6-u-secend-nav">
+					<li><a href="javascript:void(0)">二级导航</a></li>
+					<li><a href="javascript:void(0)">二级导航</a></li>
+					<li><a href="javascript:void(0)">二级导航</a></li>
+				</ul>
+			</li>
+			<li>
+				<a href="javascript:void(0)">一级导航</a>
+				<span class="v6-u-navShow">+</span>
+				<ul class="v6-u-secend-nav">
+					<li><a href="javascript:void(0)">二级导航</a></li>
+					<li><a href="javascript:void(0)">二级导航</a></li>
+					<li><a href="javascript:void(0)">二级导航</a></li>
+				</ul>
+			</li>
+		</ul>
+	</aside>
+</section>
+<section class="v6-m-mainBox">
+	<section class="v6-m-mainContent"></section>
+</section>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript">
+	//展开点击事件代理
+	$('.v6-u-first-nav').delegate('.v6-u-navShow','click',function(){
+		if($(this).parent().hasClass('active')){
+			$(this).html('+');
+			$(this).next().slideUp('slow');
+			$(this).parent().removeClass('active');
+		}else{
+			$(this).html('-');
+			$(this).next().slideDown('slow');
+			$(this).parent().addClass('active');
+			if($(this).parent().siblings('.active').length){
+				$(this).parent().siblings('.active').find('ul').slideUp('slow').parent().find('span').html('+').parent().removeClass('active');
+			}
+		}
+	})	
+</script>
