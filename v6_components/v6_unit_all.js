@@ -92,3 +92,21 @@ $('.v6-u-message-btn').click(function(){
 	$(this).next().toggle('fast');
 })
 /***** v6-u-message end ****/
+
+
+
+
+$.fn.prototype.web = function(url, data, fn, type){
+	url = (url ? url : window.location.href.hostname);
+
+	if( typeof fn !== 'function'){
+		throw new Error("this third parameter must is a function!");
+	}
+
+	$.ajax({
+		url: url,
+		type: type,
+		data: data,
+		success: fn,
+	})
+}

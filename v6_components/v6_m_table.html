@@ -1,3 +1,75 @@
-<section class="v6-u-table">
-	
+<section class="v6-m-table">
+	<table class="v6-u-table">
+		<thead>
+			<tr>
+				<th>tableThead1</th>
+				<th>tableThead1</th>
+				<th>tableThead1</th>
+				<th>tableThead1</th>
+				<th>tableThead1</th>
+			</tr>
+		</thead>
+		<tbody>	
+		</tbody>
+	</table>
 </section>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript">
+
+	var data = [
+		{ 
+			title: '标题一',
+			name: "Mary",
+			age: 12,
+			des: "this is a test table"
+		},
+		{ 
+			title: '标题一',
+			name: "Mary",
+			age: 12,
+			des: "this is a test table"
+		},
+		{ 
+			title: '标题一',
+			name: "Mary",
+			age: 12,
+			des: "this is a test table"
+		},
+		{ 
+			title: '标题一',
+			name: "Mary",
+			age: 12,
+			des: "this is a test table"
+		},
+		{ 
+			title: '标题一',
+			name: "Mary",
+			age: 12,
+			des: "this is a test table"
+		},
+	]
+
+
+
+	$.fn.v6Table = function(option){
+
+		if( typeof option !== 'object'){
+			throw new Error(option + 'is a not Object!');
+		}
+
+		var url = option.url ? option.url : window.location.href;
+		var type = option.type ? option.type : 'get';
+		
+	}
+
+	$('.v6-u-table').v6Table({
+		url: data
+	});
+
+
+
+	var weakMap = new WeakMap();
+	var target1 = document.getElementById('app');
+	weakMap.set(target1, handler1);
+	weakMap.get(target1).addEventListener(,weakMap.get(target1))
+</script>

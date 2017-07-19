@@ -1,0 +1,48 @@
+.v6-m-header{ width: 100%; height: 50px;background: #1C2B36; position: fixed; top: 0}
+.v6-m-nav{
+	width: 240px;
+	height: 100%;
+	overflow: hidden;
+	background: #1C2B36;
+	position: fixed;
+	color: #8DACC4;
+}
+.v6-u-first-nav a {
+	position: relative; 
+	display: inline-block;
+	width: 100%;
+	color: #8DACC4; 
+	text-decoration: none;
+	font-size: 11px;
+	text-transform: uppercase;
+	outline: 0;
+	padding: 12px 15px 12px 2px;
+}
+.v6-u-first-nav a:hover{ text-decoration: none; background: #17232C; color: #fff;}
+.v6-u-first-nav li{ border-bottom: 1px solid #17232C;}
+.v6-u-first-nav>li.active{ color: #fff}
+.v6-u-first-nav>li.active>a{ color: #fff;background: #17232C; }
+.v6-u-secend-nav{ display: none; background: #131E25;}
+.v6-u-secend-nav .u-second-level { padding-left: 40px; position: relative;}
+.u-second-level span { position: absolute; right: 20px; top: 12px; }
+.v6-u-third-nav { display: none;background: #10181E; }
+.v6-u-third-nav .u-third-level{ padding-left: 60px; }
+.u-first-level span { position: absolute; right: 20px; top: 12px;}
+.u-first-level i { 
+	display: inline-block; 
+	width: 45px; 
+	text-align: center;
+	transition: color .4s ease;
+	-webkit-transition: color .4s ease;
+	-moz-transition: color .4s ease;
+}
+.m-secend-level,.m-third-level{ display: none; }
+.m-delete-level{ 
+	position: absolute;
+	margin-top: -20px;
+	font-size: 20px;
+}
+.v6-m-mainBox{ margin-left: 240px;}
+.v6-m-mainContent{ width: 100%;min-height: 900px;padding: 20px; margin-top: 50px; }
+.v6-m-footer{ width: 100%;padding-left: 240px; height: 50px; 0.32rem}
+
